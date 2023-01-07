@@ -54,7 +54,7 @@ ROOT_URLCONF = 'cruddjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'polls/templates/polls'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'cruddjango.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'djangoprueba',
+        'USER': 'root',
+        'PASSWORD': '211772809',
+        'HOST': 'localhost',
+        'PORT': 3306,
     }
 }
 
